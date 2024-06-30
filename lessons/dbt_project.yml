@@ -5,6 +5,7 @@
 name: 'lessons'
 version: '1.0.0'
 
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'lessons'
 
@@ -32,6 +33,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   lessons:
+    # Config indicated by "+"" and applies to all files under models/example/
+    # It would still work without the "+", but it's useful to distinguish from a resource path
     +materialized: table #Default all SQL models to be materialized as tables
     +persist_docs: #Writes all of our column descriptions into BigQuery
       relation: true

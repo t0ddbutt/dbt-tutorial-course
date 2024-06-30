@@ -36,6 +36,7 @@ models:
         description: "Number of items in the order"
 
       - name: order_status
+        description: "{{ doc('status') }}"
 
     # Columns from int_ecommerce__order_items_product
     # We should test these columns as they're new
