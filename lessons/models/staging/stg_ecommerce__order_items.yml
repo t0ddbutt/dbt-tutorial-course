@@ -10,9 +10,7 @@ models:
       - name: order_item_id
         # Model tests (run AFTER model is built)
         tests:
-          - not_null:
-              severity: error
-          - unique:
+          - primary_key:
               severity: error
         # Model contract (run BEFORE model is built)
         data_type: INTEGER
@@ -22,6 +20,8 @@ models:
 
       - name: order_id
         data_type: INTEGER
+        constraints:
+          - type: not_null
         tests:
           - not_null
           - relationships:
@@ -30,11 +30,15 @@ models:
 
       - name: user_id
         data_type: INTEGER
+        constraints:
+          - type: not_null
         tests:
           - not_null
 
       - name: product_id
         data_type: INTEGER
+        constraints:
+          - type: not_null
         tests:
           - not_null
           - relationships:
