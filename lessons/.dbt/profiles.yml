@@ -1,4 +1,5 @@
 lessons:
+  target: dev
   outputs:
     dev:
       dataset: dbt_ktb
@@ -10,4 +11,4 @@ lessons:
       project: udemy-dbt-426123
       threads: 60
       type: bigquery
-  target: dev
+  
