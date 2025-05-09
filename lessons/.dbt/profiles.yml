@@ -1,0 +1,14 @@
+lessons:
+  target: dev
+  outputs:
+    dev:
+      dataset: dbt_ktb
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: udemy-dbt-426123
+      threads: 60
+      type: bigquery
+  
